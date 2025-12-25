@@ -2,8 +2,6 @@
 
 A full-stack application that ingests articles, processes them using an LLM-powered Node.js bot, and displays results in a modern React frontend with filtering and detailed views.
 
----
-
 ## 🧠 Project Overview
 
 This project consists of **three phases**:
@@ -14,8 +12,6 @@ This project consists of **three phases**:
    Fetches unprocessed articles, enhances them using AI logic (mock/LLM), and updates the backend.
 3. **Frontend (React + Vite)**
    Displays articles, supports filtering (Pending / Processed), and shows detailed article views.
-
----
 
 ## 🗂 Project Structure
 
@@ -49,8 +45,6 @@ beyondchats-assignment/
 └── README.md
 ```
 
----
-
 ## 🧩 Phase 1 – Backend (Laravel API)
 
 ### Features
@@ -72,8 +66,6 @@ beyondchats-assignment/
 | references | json       | AI references        |
 | timestamps | timestamps | Created / Updated    |
 
----
-
 ### API Endpoints
 
 | Method | Endpoint                      | Description             |
@@ -83,8 +75,6 @@ beyondchats-assignment/
 | GET    | `/api/articles?updated=false` | Only pending articles   |
 | GET    | `/api/articles/{id}`          | Single article detail   |
 | POST   | `/api/articles`               | Create article          |
-
----
 
 ### Backend Setup
 
@@ -102,8 +92,6 @@ Backend runs on:
 ```
 http://127.0.0.1:8000
 ```
-
----
 
 ## 🤖 Phase 2 – Node LLM Bot
 
@@ -137,8 +125,6 @@ Processed article ID: X
 
 > The bot safely skips already processed articles.
 
----
-
 ## 🎨 Phase 3 – Frontend (React + Vite)
 
 ### Features
@@ -148,8 +134,6 @@ Processed article ID: X
 * Article detail page
 * References display
 * Modern dark UI
-
----
 
 ### Frontend Setup
 
@@ -166,35 +150,20 @@ Frontend runs on:
 http://localhost:5173
 ```
 
----
-
 ## 🧪 How to Test the Entire System
 
 ### 1️⃣ Create an Article (Backend)
 
-```bash
-POST http://127.0.0.1:8000/api/articles
-```
-
-Body:
-
-```json
-{
-  "title": "Sample Article",
-  "content": "This is raw article content",
-  "source_url": "https://example.com"
-}
-```
-
----
+curl -X POST http://127.0.0.1:8000/api/articles ^
+-H "Content-Type: application/json" ^
+-d "{\"title\":\"What is BeyondChats?\",\"content\":\"Explain BeyondChats AI platform\",\"is_updated\":false}"
+ uplaod in same format using cURL in terminal.
 
 ### 2️⃣ Verify Frontend (Pending)
 
 * Open frontend
 * Article appears as **Pending**
 * Filter → Pending works
-
----
 
 ### 3️⃣ Run Node Bot
 
@@ -203,8 +172,6 @@ cd node-llm-bot
 node index.js
 ```
 
----
-
 ### 4️⃣ Verify Processed State
 
 * Refresh frontend
@@ -212,8 +179,6 @@ node index.js
 * Status updated
 * Click **View Details**
 * See enhanced content + references
-
----
 
 ## 🧠 How the System Works (End-to-End)
 
@@ -224,8 +189,6 @@ node index.js
 5. Backend updates article
 6. Frontend reflects changes in real time
 
----
-
 ## 🛠 Tech Stack
 
 * **Backend:** Laravel 12, PHP 8.2
@@ -233,8 +196,6 @@ node index.js
 * **Frontend:** React, Vite, React Router
 * **Database:** MySQL / SQLite
 * **Styling:** Custom CSS (Dark UI)
-
----
 
 ## ✅ Current Status
 
@@ -244,8 +205,6 @@ node index.js
 ✔ Assignment-ready UI
 ✔ Clean architecture
 
----
-
 ## 🚀 Possible Enhancements
 
 * Real OpenAI / Gemini integration
@@ -253,8 +212,6 @@ node index.js
 * Live WebSocket updates
 * Admin dashboard
 * Pagination & search
-
----
 
 ## 👤 Author
 
