@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Article extends Model
+{
+    protected $fillable = [
+        'title',
+        'content',
+        'sources',
+        'is_updated',
+    ];
+
+    protected $casts = [
+        'sources' => 'array',
+        'is_updated' => 'boolean',
+    ];
+}

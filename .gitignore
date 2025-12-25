@@ -1,0 +1,63 @@
+##################################
+# GLOBAL
+##################################
+.env
+.env.*
+!.env.example
+
+node_modules/
+vendor/
+
+##################################
+# OS / Editor
+##################################
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+##################################
+# Laravel
+##################################
+backend-laravel/.env
+backend-laravel/storage/*
+!backend-laravel/storage/.gitignore
+backend-laravel/bootstrap/cache/*
+!backend-laravel/bootstrap/cache/.gitignore
+
+backend-laravel/vendor/
+backend-laravel/public/storage
+
+backend-laravel/database/*.sqlite
+backend-laravel/database/database.sqlite
+
+##################################
+# Node LLM Bot
+##################################
+node-llm-bot/node_modules/
+node-llm-bot/.env
+node-llm-bot/logs/
+node-llm-bot/*.log
+
+##################################
+# Frontend (Vite / React)
+##################################
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+
+##################################
+# Logs
+##################################
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+##################################
+# Build & Cache
+##################################
+.cache/
+.parcel-cache/
+.eslintcache
