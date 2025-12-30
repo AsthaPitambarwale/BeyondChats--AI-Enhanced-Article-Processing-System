@@ -1,4 +1,4 @@
-# BeyondChats Assignment – AI-Enhanced Article Processing System
+# AI-Enhanced Article Processing System
 
 A full-stack application that ingests articles, processes them using an LLM-powered Node.js bot, and displays results in a modern React frontend with filtering and detailed views.
 
